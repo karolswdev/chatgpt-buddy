@@ -98,6 +98,7 @@
 					// 	});
 					// };
 
+                    console.log('mime type');
 					console.log(mediaRecorder.mimeType);
 
 					sendButton.onclick = function () {
@@ -105,7 +106,7 @@
 							method: "POST",
 							body: blob,
 							headers: {
-								"Content-Type": mediaRecorder.mimeType
+								"Content-Type": 'audio/mp4'
 							}
 						}).then((response) => {
 							if (response.ok) {
